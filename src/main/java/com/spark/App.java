@@ -24,7 +24,9 @@ public class App {
     private static final Pattern SPACE = Pattern.compile(" ");
 
     public static void main(String[] args) {
-        // WSClient rq1=new WSClient();        JavaSparkContext sc = new JavaSparkContext();
+        // WSClient rq1=new WSClient();      
+        JavaSparkContext sc = new JavaSparkContext();
+     
         JavaStreamingContext jssc = new JavaStreamingContext(sc, Durations.seconds(1));
         Map<String, Integer> topicMap = new HashMap<String, Integer>();
         if (args.length != 2) {
